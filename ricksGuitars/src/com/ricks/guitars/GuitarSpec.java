@@ -18,6 +18,26 @@ public class GuitarSpec {
 		this.backWood = backWood;
 		this.topWood = topWood;
 	}
+	
+	public boolean matches(GuitarSpec otherSpec){
+		if(builder != otherSpec.builder)
+			return false;
+		
+		if((model!=null) && (!model.equals("")) && (!model.equals(otherSpec.model)))
+			return false;
+		
+		if(type != otherSpec.type)
+			return false;
+		
+		if(backWood != otherSpec.backWood)
+			return false;
+		if(topWood != otherSpec.topWood)
+			return false;
+		
+		if(numStrings != otherSpec.numStrings)
+			return false;
+		return true;
+	}
 
 	public Builder getBuilder() {
 		return builder;

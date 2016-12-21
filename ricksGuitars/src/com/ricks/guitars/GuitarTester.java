@@ -10,8 +10,8 @@ public class GuitarTester {
 
 		// System.out.println(inventory.getGuitar("111").getPrice());
 
-		GuitarSpec whatEricLikes = new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC, 10 ,Wood.ALDER,
-				Wood.ALDER);
+		GuitarSpec whatEricLikes = new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC,
+				10, Wood.ALDER,	Wood.ALDER);
 
 		List matchingGuitars = inventory.search(whatEricLikes);
 		// System.out.println(matchingGuitars);
@@ -21,8 +21,8 @@ public class GuitarTester {
 				Guitar guitar = (Guitar) i.next();
 				GuitarSpec spec = guitar.getGuitarSpec();
 				System.out.println("  We have a " + spec.getBuilder() + " " + spec.getModel() + " " + spec.getType()
-				+ " guitar:\n     " + spec.getBackWood() + " back and sides,\n     " + spec.getTopWood()
-				+ " top.\n  You can have it for only $" + guitar.getPrice() + "!\n  ----------------");
+						+ " guitar:\n     " + spec.getBackWood() + " back and sides,\n     " + spec.getTopWood()
+						+ " top.\n  You can have it for only $" + guitar.getPrice() + "!\n  ----------------");
 			}
 
 		} else {
@@ -31,10 +31,14 @@ public class GuitarTester {
 	}
 
 	private static void initializeInventory(Inventory inventory) {
-		inventory.addGuitar("111", 3999.95, Builder.COLLINGS, "CJ", Type.ACOUSTIC, 10, Wood.INDIAN_ROSEWOOD, Wood.SITKA);
-		inventory.addGuitar("V95693", 1499.95, Builder.FENDER, "Stratocastor", Type.ELECTRIC, 8, Wood.ALDER, Wood.ALDER);
-		inventory.addGuitar("V9512", 1549.95, Builder.FENDER, "Stratocastor", Type.ELECTRIC, 10, Wood.ALDER, Wood.ALDER);
-		inventory.addGuitar("122784", 5495.95, Builder.MARTIN, "D-18", Type.ACOUSTIC, 9, Wood.MAHOGANY, Wood.ADIRONDACK);
+		inventory.addGuitar("111", 3999.95, Builder.COLLINGS, "CJ", Type.ACOUSTIC, 10, Wood.INDIAN_ROSEWOOD,
+				Wood.SITKA);
+		inventory.addGuitar("V95693", 1499.95, Builder.FENDER, "Stratocastor", Type.ELECTRIC, 8, Wood.ALDER,
+				Wood.ALDER);
+		inventory.addGuitar("V9512", 1549.95, Builder.FENDER, "Stratocastor", Type.ELECTRIC, 10, Wood.ALDER,
+				Wood.ALDER);
+		inventory.addGuitar("122784", 5495.95, Builder.MARTIN, "D-18", Type.ACOUSTIC, 9, Wood.MAHOGANY,
+				Wood.ADIRONDACK);
 		inventory.addGuitar("76531", 6295.95, Builder.MARTIN, "OM-28", Type.ACOUSTIC, 9, Wood.BRAZILIAN_ROSEWOOD,
 				Wood.ADIRONDACK);
 		inventory.addGuitar("70108276", 2295.95, Builder.GIBSON, "Les Paul", Type.ELECTRIC, 9, Wood.MAHOGANY,

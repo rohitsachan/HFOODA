@@ -33,46 +33,11 @@ public class Inventory {
 			Guitar guitar = (Guitar) i.next();
 			GuitarSpec guitarSpec = guitar.getGuitarSpec();
 			
-			if(searchSpec.getBuilder() != guitarSpec.getBuilder())
-				continue;
-			
-			String model = searchSpec.getModel().toLowerCase();
-			if((model!=null) && (!model.equals("")) && (!model.equals(guitarSpec.getModel().toLowerCase())))
-				continue;
-			
-			if(searchSpec.getType() != guitarSpec.getType())
-				continue;
-			
-			if(searchSpec.getBackWood() != guitarSpec.getBackWood())
-				continue;
-			if(searchSpec.getTopWood() != guitarSpec.getTopWood())
-				continue;
-			
-			if(searchSpec.getNumStrings() != guitarSpec.getNumStrings())
-				continue;
-			
-			matchingGuitars.add(guitar);
+			if(guitar.getGuitarSpec().matches(searchSpec)){
+				matchingGuitars.add(guitar);
+			}
 		}
 		return matchingGuitars;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
