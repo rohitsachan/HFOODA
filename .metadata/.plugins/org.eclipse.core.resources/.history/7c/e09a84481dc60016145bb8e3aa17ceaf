@@ -1,0 +1,19 @@
+package com.ricks.guitars;
+
+import java.util.*;
+
+public class Inventory {
+
+	private List guitars;
+
+	public Inventory() {
+		guitars = new LinkedList();
+	}
+
+	private void addGuitar(String serialNumber, double price, Builder builder, String model, 
+			Type type, Wood backWood, Wood topWood) {
+		Guitar guitar = new Guitar(serialNumber, price, builder, model, type, backWood, topWood);
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.ricks.guitars;
+
+public enum Builder {
+	FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY;
+	
+	public String toString(){
+		switch(this){
+		case ANY: return "any";
+		case COLLINGS: return "collings";
+		case FENDER: return 
+		case GIBSON: return 
+		case MARTIN: return 
+		case OLSON: return 
+		case PRS: return 
+		case RYAN: return 
+		default: return "unspecified";
+		
+		}
+		
+	}
+}

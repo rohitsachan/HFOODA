@@ -1,0 +1,14 @@
+package com.ricks.guitars;
+
+import java.util.*;
+
+public class Inventory {
+	
+	private List guitars;
+	
+	public Inventory(){
+		guitars = new LinkedList();
+	}
+	
+	
+}
